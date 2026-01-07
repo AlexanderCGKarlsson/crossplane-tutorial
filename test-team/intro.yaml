@@ -53,5 +53,5 @@ spec:
     host: silly-demo.acme.com
     dbSecret:
       name: silly-demo-db
-      namespace: a-team
+      namespace: test-team
     kubernetesProviderConfigName: cluster01
