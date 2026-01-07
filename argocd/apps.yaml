@@ -2,19 +2,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: a-team
+  name: test-team
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/vfarcic/crossplane-tutorial
+    repoURL: https://github.com/AlexanderCGKarlsson/crossplane-tutorial.git/
     targetRevision: HEAD
     path: a-team
   destination:
     server: https://kubernetes.default.svc
-    namespace: a-team
+    namespace: test-team
   syncPolicy:
     automated:
       selfHeal: true
